@@ -16,3 +16,7 @@ then install all the necessary OSGi bundles that we have defined from the featur
 	JBossFuse:karaf@root> features:install application-bundles
 	
 after this the schema should be created in your database. 
+
+Note: Make sure you have changed the datasource connection information in the following file accordingly:
+
+	database-services-spring-context.xml
