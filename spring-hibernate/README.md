@@ -23,7 +23,7 @@ install the following bundles:
 
 install the application bundles: 
 
-	JBossFuse:karaf@root> install -s mvn:org.redhat.support/da^Cbase-services/1.0.0-SNAPSHOT
+	JBossFuse:karaf@root> install -s mvn:org.redhat.support/database-services/1.0.0-SNAPSHOT
 	JBossFuse:karaf@root> install -s mvn:org.redhat.support/fuse-spring-hibernate/1.0-SNAPSHOT
 
 after this the schema should be created in your database. 
