@@ -4,9 +4,14 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.redhat.support</groupId>
+    <parent>
+        <groupId>fuse-examples</groupId>
+        <artifactId>fuse-spring-hibernate-module</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    
     <artifactId>database-services</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
     <packaging>bundle</packaging>
     <name>Database Services</name>
 
@@ -40,8 +45,8 @@
                             javax.persistence,
                             org.hibernate.proxy,
                             javassist.util.proxy,
+                            javax.sql;resolution:=optional,
                             *
-                            javax.sql;resolution:=optional
                         </Import-Package>
                         <Include-Resource>src/main/resources</Include-Resource>
                         <DynamicImport-Package>*</DynamicImport-Package>

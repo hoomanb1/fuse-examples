@@ -14,18 +14,22 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.redhat.support</groupId>
+	<parent>
+        <groupId>fuse-examples</groupId>
+        <artifactId>fuse-spring-hibernate-module</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+
 	<artifactId>fuse-spring-hibernate</artifactId>
 	<packaging>bundle</packaging>
-	<version>1.0-SNAPSHOT</version>
-
+	
 	<name>Business Service</name>
 
 	<properties>
 		<camel-version>1.5.0</camel-version>
 		<maven-bundle-plugin>2.4.0</maven-bundle-plugin>
 		<javax.persistence>2.0.0</javax.persistence>
-		<hibernate-entitymanager>4.2.9.Final</hibernate-entitymanager>
 	</properties>
 
 	<dependencies>
@@ -37,7 +41,6 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${hibernate-entitymanager}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.geronimo.specs</groupId>
