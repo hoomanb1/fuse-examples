@@ -1,29 +1,18 @@
 Installation
 ============
-Download this project and cd to each individual project: 
 
-	cd database-services 
-	cd fuse-spring-hibernate
-
-and run: 
+Run the following command from the project root:
 
 	mvn clean install
 
-Install the following features: 
+Install the features file. This gets pulled out from your local Maven repository, and defines which bundles you mean to install for the example project.
 
-	JBossFuse:karaf@root> features:install jndi
-	JBossFuse:karaf@root> features:install transaction
-	JBossFuse:karaf@root> features:install jpa
-	JBossFuse:karaf@root> features:install jpa-hibernate
+	JBossFuse:karaf@root> features:addurl mvn:fuse-examples/features/1.0-SNAPSHOT/xml/features
 
-install the following bundles:
+then install all of the necessary OSGi bundles by that we have defined from the feature project:
 
-	JBossFuse:karaf@root> install -s mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.commons-dbcp/1.4_3
-	JBossFuse:karaf@root> install -s wrap:mvn:mysql/mysql-connector-java/5.1.14 
-
-install the application bundles: 
-
-	JBossFuse:karaf@root> install -s mvn:org.redhat.support/database-services/1.0.0-SNAPSHOT
-	JBossFuse:karaf@root> install -s mvn:org.redhat.support/fuse-spring-hibernate/1.0-SNAPSHOT
-
+	JBossFuse:karaf@root> features:install project-features
+	JBossFuse:karaf@root> features:install database-features
+	JBossFuse:karaf@root> features:install application-bundles
+	
 after this the schema should be created in your database. 
