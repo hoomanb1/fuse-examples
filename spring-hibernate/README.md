@@ -9,7 +9,7 @@ Install the features file. This gets pulled out from your local Maven repository
 
 	JBossFuse:karaf@root> features:addurl mvn:fuse-examples/features/1.0-SNAPSHOT/xml/features
 
-then install all of the necessary OSGi bundles by that we have defined from the feature project:
+then install all the necessary OSGi bundles that we have defined from the feature project:
 
 	JBossFuse:karaf@root> features:install project-features
 	JBossFuse:karaf@root> features:install database-features
