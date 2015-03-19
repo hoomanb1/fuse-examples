@@ -29,8 +29,8 @@
     </feature>
 
     <feature name="application-bundles" version="${project.version}">
-        <bundle>mvn:org.redhat.support/database-services/1.0.0-SNAPSHOT</bundle>
-        <bundle start-level="100">mvn:org.redhat.support/fuse-spring-hibernate/1.0-SNAPSHOT</bundle>
+        <bundle>mvn:fuse-examples/database-services/1.0-SNAPSHOT</bundle>
+        <bundle start-level="100">mvn:fuse-examples/fuse-spring-hibernate/1.0-SNAPSHOT</bundle>
     </feature>   
 
 </features>
