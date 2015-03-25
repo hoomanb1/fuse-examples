@@ -12,7 +12,7 @@
 
     <modules>
         <module>database-services</module>
-        <module>fuse-spring-hibernate</module>
+        <module>fuse-blueprint-hibernate</module>
         <module>features</module>
     </modules>
 
@@ -34,7 +34,7 @@
             </dependency>
             <dependency>
                 <groupId>org.redhat.support</groupId>
-                <artifactId>fuse-spring-hibernate</artifactId>
+                <artifactId>fuse-blueprint-hibernate</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
