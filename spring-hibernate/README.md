@@ -1,6 +1,6 @@
 Project Overview
 =====================
-This is a sample project that provides the neccessary osgi bundles to create a multi-tiers bundles (DAO, Business Services, etc). Project consists of three components, 1) database-service that contains the data layer connection to the underlying database - mysql in this case - 2) fuse-spring-hibernate contains the business logic and the domain entities. 3) and finally the features bundle that aggregates all the inter-dependent bundles into a larger unit of deployment which can then be deployed in to JBoss Fuse directly.  
+This is a sample project that provides the neccessary osgi bundles to create a multi-tiers bundles (DAO, Business Services, etc). Project consists of three components, 1) database-service that contains the data layer connection to the underlying database - mysql in this case - 2) fuse-blueprint-hibernate contains the business logic and the domain entities. 3) and finally the features bundle that aggregates all the inter-dependent bundles into a larger unit of deployment which can then be deployed in to JBoss Fuse directly.  
 
 
 Installation
