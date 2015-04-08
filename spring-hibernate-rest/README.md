@@ -1,10 +1,10 @@
 
 Project Overview
-
+================
 This is a sample project that provides the neccessary osgi bundles to create a multi-tiers bundles (DAO, Business Services, etc). Project consists of four components, 1) database-service that contains the data layer connection to the underlying database - mysql in this case - 2) fuse-blueprint-hibernate contains the business logic and the domain entities. 3) A RESTful web service that utilizes apache cxf to expose an endpoint to interact with backend entities. 4) and finally the features bundle that aggregates all the inter-dependent bundles into a larger unit of deployment which can then be deployed in to JBoss Fuse directly.
 
 Installation
-
+============
 Run the following command from the project root:
 
   mvn clean install
@@ -19,6 +19,9 @@ then install all the necessary OSGi bundles that we have defined from the featur
   JBossFuse:karaf@root> features:install database-features
   JBossFuse:karaf@root> features:install jackson
   JBossFuse:karaf@root> features:install application-bundles
+
+Sending Data to the API
+=======================
 
 The RESTful endpoint consumes json as a media type and can be hit by the following command: 
 
