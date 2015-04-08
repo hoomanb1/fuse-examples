@@ -29,13 +29,13 @@
     </feature>
 
     <feature name="jackson" version="1.0-SNAPSHOT">
-        <bundle>mvn:javax.ws.rs/jsr311-api/1.1.1</bundle>
-        <bundle>mvn:com.fasterxml.jackson.core/jackson-core/2.4.3</bundle>
-        <bundle>mvn:com.fasterxml.jackson.core/jackson-annotations/2.4.3</bundle>
-        <bundle>mvn:com.fasterxml.jackson.core/jackson-databind/2.4.3</bundle>
-        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.4.3</bundle>
-        <bundle>mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.4.3</bundle>
-        <bundle>mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.4.3</bundle>
+        <bundle dependency="true">mvn:javax.ws.rs/jsr311-api/1.1.1</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-core/2.4.3</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-annotations/2.4.3</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.core/jackson-databind/2.4.3</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-base/2.4.3</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.jaxrs/jackson-jaxrs-json-provider/2.4.3</bundle>
+        <bundle dependency="true">mvn:com.fasterxml.jackson.module/jackson-module-jaxb-annotations/2.4.3</bundle>
     </feature>
 
     <feature name="application-bundles" version="${project.version}">
