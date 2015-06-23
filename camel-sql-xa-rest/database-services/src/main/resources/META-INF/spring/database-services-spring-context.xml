@@ -4,15 +4,6 @@
 	xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<!-- <bean id="esbDataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource"> -->
-	<!-- <property name="driverClassName" value="com.mysql.jdbc.Driver" /> -->
-	<!-- <property name="url" value="jdbc:mysql://localhost:3306/test"/> -->
-	<!-- <property name="username" value="root"/> -->
-	<!-- <property name="password" value="Human@SYS"/> -->
-	<!-- <property name="defaultAutoCommit" value="false"/> -->
-	<!-- <property name="transactionManager" ref="transactionManager"/> -->
-	<!-- </bean> -->
-
 	<bean id="esbDataSource" class="com.mysql.jdbc.jdbc2.optional.MysqlXADataSource">
 		<property name="databaseName" value="test" />
 		<property name="url" value="jdbc:mysql://localhost:3306/test?relaxAutoCommit=true" />
