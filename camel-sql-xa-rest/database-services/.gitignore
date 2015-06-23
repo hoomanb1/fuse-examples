@@ -1,0 +1,9 @@
+.classpath
+.project
+.settings/*
+activemq-data/*
+target/*
+CamelRouteTest.launch
+*.iml
+.idea
+/target
