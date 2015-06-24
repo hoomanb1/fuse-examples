@@ -23,4 +23,9 @@ then install all the necessary features that we have defined from the feature pr
       JBossFuse:karaf@root> features:install rest-features
       JBossFuse:karaf@root> features:install integration-bundle
       
+Testing
+=======
+Hit the exposed REST endpoint (spring-hibernate-rest): 
+      curl -H "Accept: application/json" -H "Content-type: application/json" -X PUT -d '{"branchCode":"br-0123", "clientCode":"cl-0123","userCode":"us-0123","userName":"hoomanb","uuid":"uu-0123"}' http://localhost:9002/rest/billing/create
+      
       
