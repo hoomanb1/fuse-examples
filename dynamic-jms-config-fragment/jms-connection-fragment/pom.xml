@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.jboss.fuse</groupId>
+  <artifactId>jms-connection-fragment</artifactId>
+  <version>1.0.0</version>
+  <packaging>bundle</packaging>
+   
+  <name>JMS Fragment :: Broker Connection</name>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.felix</groupId>
+				<artifactId>maven-bundle-plugin</artifactId>
+				<version>2.2.0</version>
+				<extensions>true</extensions>
+				<configuration>
+					<instructions>
+						<Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
+						<Fragment-Host>camel-broker-client;bundle-version=1.0.0.SNAPSHOT</Fragment-Host>
+					</instructions>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+  
+  <repositories>
+	<repository>
+		<id>fusesource</id>
+		<name>Fusesource Release Repository</name>
+		<url>http://repo.fusesource.com/maven2</url>
+		<snapshots>
+			<enabled>false</enabled>
+		</snapshots>
+	</repository>
+  </repositories>
+</project>
