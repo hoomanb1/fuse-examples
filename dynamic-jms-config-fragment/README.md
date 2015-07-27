@@ -84,11 +84,9 @@ Once the build is successful we can verify the newly-created profile from Fuse c
             
 Now we can provision this profile into our "app-container" container with the following command: 
 
-            
+            JBossFuse:karaf@root> fabric:container-add-profile app-container amq-fragment-connection       
 
-            
-
-Note-4:For more information on how fabric8-maven-plugin works please refer to the documentation: http://fabric8.io/gitbook/mavenPlugin.html
+Note-4:For more information on how fabric8-maven-plugin works please refer to the [fabric8-maven-plugin documentation](http://fabric8.io/gitbook/mavenPlugin.html) 
 
 
 
