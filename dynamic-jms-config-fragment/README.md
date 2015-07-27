@@ -53,7 +53,7 @@ Once the containers are created our fabric topology looks like this:
   
 
 
-Please note: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details.  
+Note: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details.  
 
 Note: For more information on the broker topology you can refer to fabric8 documentation: http://fabric8.io/gitbook/brokerTopology.html    
 
