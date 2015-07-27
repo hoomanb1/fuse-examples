@@ -40,6 +40,10 @@ So at this stage we'll need to build our activemq container so that our camel bu
 
             fabric:mq-create --create-container broker-container --jvm-opts "-Xms1024m -XX:MaxPermSize=512m       -Xmx1024m -Xdebug" --kind MasterSlave broker-profile
             
+Note-1: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details. 
+
+Note-2: For more information on the broker topology you can refer to fabric8 documentation: http://fabric8.io/gitbook/brokerTopology.html  
+            
 Once the containers are created our fabric topology looks like this: 
 
             JBossFuse:karaf@root> container-list 
@@ -51,7 +55,7 @@ Once the containers are created our fabric topology looks like this:
               broker-container   1.0        karaf   yes          mq-broker-default.broker-profile  success           
               broker-container2  1.0        karaf   yes          mq-broker-default.broker-profile  success 
   
-Note: When creating the broker instance with the above command, broker's openwire transport listener listens on a random port, you can verify that by loging into the hawtio console and connect to master broker container by clicling on the arrow next to it. From the ActiveMQ tab look for "Open wire url". To set a fixed port for the openwire listener we add a config adming propety setting in the broker's profile: 
+Note-3: When creating the broker instance with the above command, broker's openwire transport listener listens on a random port, you can verify that by loging into the hawtio console and connect to master broker container by clicling on the arrow next to it. From the ActiveMQ tab look for "Open wire url". To set a fixed port for the openwire listener we add a config adming propety setting in the broker's profile: 
 
             JBossFuse:karaf@root> fabric:profile-edit --pid io.fabric8.mq.fabric.server-broker-profile/openwire-port=61618 mq-broker-default.broker-profile
             
@@ -68,6 +72,25 @@ To ensure our new port takes the effect we'll restart the broker containers:
             JBossFuse:karaf@root> fabric:container-start broker-container broker-container2
             The list of container names: [broker-container, broker-container2]
 
+Now we ar eready to build our profile that contains the project bundles, for this purpose we'll use fabric8-maven-plugin to create the profile, so running the following command from the project root deploys our project artifacts into the local fabric server: 
+
+            mvn fabric8:deploy
+
+Once the build is successful we can verify the newly-created profile from Fuse console: 
+
+            JBossFuse:karaf@root> fabric:profile-display amq-fragment-connection
+            
+Now we can provision this profile into our "app-container" container with the following command: 
+
+            
+
+            
+
+Note-4:For more information on how fabric8-maven-plugin works please refer to the documentation: http://fabric8.io/gitbook/mavenPlugin.html
+
+
+
+            
 
             
             
@@ -75,9 +98,9 @@ To ensure our new port takes the effect we'll restart the broker containers:
 
             
 
-Note: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details.  
+ 
 
-Note: For more information on the broker topology you can refer to fabric8 documentation: http://fabric8.io/gitbook/brokerTopology.html    
+  
 
       
       
