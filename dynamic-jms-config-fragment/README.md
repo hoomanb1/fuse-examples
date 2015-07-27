@@ -51,7 +51,29 @@ Once the containers are created our fabric topology looks like this:
               broker-container   1.0        karaf   yes          mq-broker-default.broker-profile  success           
               broker-container2  1.0        karaf   yes          mq-broker-default.broker-profile  success 
   
+Note: When creating the broker instance with the above command, broker's openwire transport listener listens on a random port, you can verify that by loging into the hawtio console and connect to master broker container by clicling on the arrow next to it. From the ActiveMQ tab look for "Open wire url". To set a fixed port for the openwire listener we add a config adming propety setting in the broker's profile: 
 
+            JBossFuse:karaf@root> fabric:profile-edit --pid io.fabric8.mq.fabric.server-broker-profile/openwire-port=61618 mq-broker-default.broker-profile
+            
+This can be verified by inspecting the profile: 
+
+            JBossFuse:karaf@root> fabric:profile-display mq-broker-default.broker-profile
+            
+To ensure our new port takes the effect we'll restart the broker containers: 
+
+            JBossFuse:karaf@root> fabric:container-stop broker-container broker-container2
+            The list of container names: [broker-container, broker-container2]
+            Container 'broker-container' stopped successfully.
+            
+            JBossFuse:karaf@root> fabric:container-start broker-container broker-container2
+            The list of container names: [broker-container, broker-container2]
+
+
+            
+            
+
+
+            
 
 Note: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details.  
 
