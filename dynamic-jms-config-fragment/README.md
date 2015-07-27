@@ -44,7 +44,7 @@ Note-1: For more information on the arguments that have been passed to this comm
       
             fabric:mq-create --help      
 
-Note-2: For more information on the broker topology you can refer to fabric8 documentation: http://fabric8.io/gitbook/brokerTopology.html  
+Note-2: For more information on the broker topology you can refer to [fabric8 documentation](http://fabric8.io/gitbook/brokerTopology.html)   
             
 Once the containers are created our fabric topology will like this: 
 
