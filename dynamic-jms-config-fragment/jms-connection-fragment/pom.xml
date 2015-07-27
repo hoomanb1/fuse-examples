@@ -3,12 +3,22 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.jboss.fuse</groupId>
+
+  <parent>
+        <groupId>fuse-examples</groupId>
+        <artifactId>fuse-fragment</artifactId>
+        <version>1.0-SNAPSHOT</version>
+   </parent>
+
   <artifactId>jms-connection-fragment</artifactId>
-  <version>1.0.0</version>
   <packaging>bundle</packaging>
    
   <name>JMS Fragment :: Broker Connection</name>
+
+  <properties>
+        <fabric8.profile>amq-fragment-connection</fabric8.profile>
+        <fabric8.features>mq-fabric-camel</fabric8.features>
+   </properties>
 
 	<build>
 		<plugins>
