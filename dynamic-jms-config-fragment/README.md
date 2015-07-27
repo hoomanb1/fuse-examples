@@ -40,11 +40,13 @@ So at this stage we'll need to build our activemq container so that our camel bu
 
             fabric:mq-create --create-container broker-container --jvm-opts "-Xms1024m -XX:MaxPermSize=512m  -Xmx1024m -Xdebug" --kind MasterSlave broker-profile
             
-Note-1: for more information on the arguments that have been passed to this command you can always use --help to see the command manual in details. 
+Note-1: For more information on the arguments that have been passed to this command you can always use --help to see the command manual in details e.g.
+      
+            fabric:mq-create --help      
 
 Note-2: For more information on the broker topology you can refer to fabric8 documentation: http://fabric8.io/gitbook/brokerTopology.html  
             
-Once the containers are created our fabric topology looks like this: 
+Once the containers are created our fabric topology will like this: 
 
             JBossFuse:karaf@root> container-list 
             [id]                 [version]  [type]  [connected]  [profiles]                        [provision                        status]
