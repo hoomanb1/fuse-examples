@@ -78,6 +78,8 @@ Now we are ready to build our profile that contains the project bundles, for thi
 
             mvn fabric8:deploy
 
+Note-4: To workaround [FABRIC-1253](https://issues.jboss.org/browse/FABRIC-1253) I have to manually specify one of the bundles in the configuration element of the fabric8-maven-plugin on the parent pom.xml
+
 Once the build is successful we can verify the newly-created profile from Fuse console: 
 
             JBossFuse:karaf@root> fabric:profile-display amq-fragment-connection
@@ -86,7 +88,9 @@ Now we can provision this profile into our "app-container" container with the fo
 
             JBossFuse:karaf@root> fabric:container-add-profile app-container amq-fragment-connection       
 
-Note-4:For more information on how fabric8-maven-plugin works please refer to the [fabric8-maven-plugin documentation](http://fabric8.io/gitbook/mavenPlugin.html) 
+Note-5:For more information on how fabric8-maven-plugin works please refer to the [fabric8-maven-plugin documentation](http://fabric8.io/gitbook/mavenPlugin.html) 
+
+
 
 
 
