@@ -74,7 +74,7 @@ To ensure our new port takes the effect we'll restart the broker containers:
             JBossFuse:karaf@root> fabric:container-start broker-container broker-container2
             The list of container names: [broker-container, broker-container2]
 
-Now we ar eready to build our profile that contains the project bundles, for this purpose we'll use fabric8-maven-plugin to create the profile, so running the following command from the project root deploys our project artifacts into the local fabric server: 
+Now we are ready to build our profile that contains the project bundles, for this purpose we'll use fabric8-maven-plugin to create the profile, so running the following command from the project root deploys our project artifacts into the local fabric server: 
 
             mvn fabric8:deploy
 
