@@ -17,7 +17,7 @@ this should look like the following:
       [ 253] [Resolved   ] [            ] [       ] [   60] JMS Fragment :: Broker Connection (1.0.0), Hosts: 254
       [ 254] [Active     ] [Created     ] [       ] [   60] Camel JMS Client (1.0.0.SNAPSHOT), Fragments: 253
 
-Fabric Deployment - JBOss Fuse 6.2
+Fabric Deployment - JBoss Fuse 6.2
 ===========================================================
 To deploy the project into a fabric-managed enviroment, first we build the fabric environment with the following command:
 
