@@ -6,13 +6,12 @@ To build run the bellow command on the project's root directory
 
 Run JBoss Fuse 6.2 instance, and then install the following bundles:
 
-		JBossFuse:karaf@root> install -s mvn:org.codehaus.jackson/jackson-core-asl/1.9.12
-		JBossFuse:karaf@root> install -s mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.12
+	JBossFuse:karaf@root> install -s mvn:org.codehaus.jackson/jackson-core-asl/1.9.12
+	JBossFuse:karaf@root> install -s mvn:org.codehaus.jackson/jackson-mapper-asl/1.9.12
 
 and then install camel-jackson feature:
 
-		JBossFuse:karaf@root> features:install camel-jackson
-
+	JBossFuse:karaf@root> features:install camel-jackson
 
 To deploy the project in fuse. 
 
