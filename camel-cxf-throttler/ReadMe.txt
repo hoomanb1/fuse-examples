@@ -1,9 +1,9 @@
 Camel CXF Throttler Project for Blueprint (OSGi)
-=========================================
+=================================================
 
 To build run the bellow command on the project's root directory 
 
-    mvn clean install
+    	mvn clean install
 
 Run JBoss Fuse 6.2 instance, and then install the following bundles:
 
@@ -21,5 +21,5 @@ To deploy the project in fuse.
 
 To test use the script in the root directory of the project to hit the web service endpoint:
 
-        ./smash.sh
+    	./smash.sh
 
