@@ -1,6 +1,6 @@
 Project Concept
 ===============
-This project demonstrates how you can configure your bundle to use different JMS prodivers without having to repackage your bundle using osgi fragment bundle. 
+This project demonstrates how you can configure your bundle to use different JMS prodivers without having to repackage your bundle using osgi fragment approach. 
 
 Installation
 ============
@@ -17,8 +17,8 @@ this should look like the following:
       [ 253] [Resolved   ] [            ] [       ] [   60] JMS Fragment :: Broker Connection (1.0.0), Hosts: 254
       [ 254] [Active     ] [Created     ] [       ] [   60] Camel JMS Client (1.0.0.SNAPSHOT), Fragments: 253
 
-Fabric Deployment via Fabric8-Maven-Plugin
-==========================================
+Fabric Deployment - JBoss Fuse 6.2
+===========================================================
 To deploy the project into a fabric-managed enviroment, first we build the fabric environment with the following command:
 
             JBossFuse:karaf@root> fabric:create --wait-for-provisioning
@@ -89,6 +89,8 @@ Now we can provision this profile into our "app-container" container with the fo
             JBossFuse:karaf@root> fabric:container-add-profile app-container amq-fragment-connection       
 
 Note-5:For more information on how fabric8-maven-plugin works please refer to the [fabric8-maven-plugin documentation](http://fabric8.io/gitbook/mavenPlugin.html) 
+
+
 
 
 
