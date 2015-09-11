@@ -1,6 +1,5 @@
 Camel CXF Throttler Project for Blueprint (OSGi)
-=================================================
-
+====================================================
 To build run the bellow command on the project's root directory 
 
     	mvn clean install
