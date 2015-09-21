@@ -78,7 +78,7 @@ Now we are ready to build our profile that contains the project bundles, for thi
 
             mvn fabric8:deploy
 
-Note-4: To workaround [FABRIC-1253](https://issues.jboss.org/browse/FABRIC-1253) I have to manually specified one of the bundles in the configuration element of the fabric8-maven-plugin on the parent pom.xml
+Note-4: To workaround [FABRIC-1253](https://issues.jboss.org/browse/FABRIC-1253) I have to manually specify one of the bundles in the configuration element of the fabric8-maven-plugin on the parent pom.xml
 
 Once the build is successful we can verify the newly-created profile from Fuse console: 
 
