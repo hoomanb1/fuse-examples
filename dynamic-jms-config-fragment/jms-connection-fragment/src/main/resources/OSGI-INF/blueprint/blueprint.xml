@@ -7,7 +7,7 @@
        http://camel.apache.org/schema/blueprint http://camel.apache.org/schema/blueprint/camel-blueprint.xsd">
 
 	<bean id="activemq-jms-connection-factory" class="org.apache.activemq.ActiveMQConnectionFactory">
-		<property name="brokerURL" value="tcp://localhost:61618" />
+		<property name="brokerURL" value="tcp://localhost:61617" />
 		<property name="userName" value="admin" />
 		<property name="password" value="admin" />
 	</bean>
