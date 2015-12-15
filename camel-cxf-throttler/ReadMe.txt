@@ -15,7 +15,7 @@ and then install camel-jackson feature:
 
 To deploy the project in fuse. 
 
-    osgi:install -s mvn:org.redhat.com/camel-cxf-throttler/1.0-SNAPSHOT
+    osgi:install -s mvn:org.jboss.fuse/camel-cxf-throttler/1.0-SNAPSHOT
 
 To test use the script in the root directory of the project to hit the web service endpoint:
 
