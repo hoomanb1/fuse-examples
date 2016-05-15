@@ -8,7 +8,7 @@
 		<property name="databaseName" value="test" />
 		<property name="url" value="jdbc:mysql://localhost:3306/test?relaxAutoCommit=true" />
 		<property name="user" value="root" />
-		<property name="password" value="Human@SYS" />
+		<property name="password" value="xxxx" />
 	</bean>
 
 </beans>
